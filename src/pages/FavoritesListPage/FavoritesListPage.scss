@@ -1,0 +1,13 @@
+.FavoritesListPage-container {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	align-items: flex-start;
+
+	.FavoritesListPage-item {
+		width: 33.33333%;
+		box-sizing: border-box;
+		padding: 1.5rem;
+	}
+}

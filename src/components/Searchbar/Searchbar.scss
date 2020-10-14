@@ -1,0 +1,19 @@
+.Searchbar-container {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+
+	.Searchbar-input-wrapper {
+		input {
+			box-sizing: border-box;
+			padding: 0.5rem 1.2rem;
+			width: 100%;
+			background-color: #fff;
+		}
+	}
+
+	.Searchbar-button-wrapper {
+		padding-left: 0.5rem;
+	}
+}

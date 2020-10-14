@@ -1,0 +1,14 @@
+.PokemonCard-container {
+	padding: 1rem;
+	background-color: #fff;
+	color: #212121;
+	box-shadow: 0 0 5px rgba($color: #000, $alpha: 0.2);
+
+	.PokemonCard-main-info {
+		text-align: center;
+
+		.PokemonCard-attributes {
+			text-align: left;
+		}
+	}
+}
