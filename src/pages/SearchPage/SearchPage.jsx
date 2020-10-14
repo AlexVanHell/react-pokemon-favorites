@@ -8,8 +8,8 @@ const SearchPage = (props) => {
 	const [pokemon, setPokemon] = useState(null);
 
 	const handleSearchInputChange = (value) => {
-		console.log(value);
 		setSearchValue(value);
+		setPokemon(null);
 	};
 
 	const handleSearchButtonClick = async () => {

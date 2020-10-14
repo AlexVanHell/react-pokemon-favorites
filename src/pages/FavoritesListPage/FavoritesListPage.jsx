@@ -6,9 +6,13 @@ import './FavoritesListPage.scss';
 const FavoritesListPage = (props) => {
 	const [pokemons, setPokemons] = useState([]);
 
+	const handleUnfavoriteClick = (name, value) => {
+		FavoritesService.removeByName(name);
+		setPokemons(FavoritesService.getFavorites());
+	};
+
 	useEffect(() => {
 		setPokemons(FavoritesService.getFavorites());
-
 		return () => {};
 	}, []);
 
@@ -16,7 +20,11 @@ const FavoritesListPage = (props) => {
 		<div className="FavoritesListPage-container">
 			{pokemons.map((pokemon) => (
 				<div key={pokemon.name} className="FavoritesListPage-item">
-					<PokemonCard pokemon={pokemon} isFavorite />
+					<PokemonCard
+						pokemon={pokemon}
+						isFavorite
+						onFavoriteToggle={handleUnfavoriteClick}
+					/>
 				</div>
 			))}
 		</div>

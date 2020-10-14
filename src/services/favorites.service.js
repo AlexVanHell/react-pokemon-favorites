@@ -45,4 +45,8 @@ export const FavoritesService = {
 		this.saveToLocalStorage(favorites);
 		return index;
 	},
+	isFavorite(name) {
+		const favorites = this.getFavorites();
+		return favorites.some((p) => p.name === name);
+	},
 };

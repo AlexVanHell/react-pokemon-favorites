@@ -6,7 +6,11 @@ export const PokemonService = {
 	 * @param {string} name Pokemon's name
 	 */
 	getByName: async (name) => {
-		const response = await Axios.get(`${POKEAPI_URL}/${name}`);
-		return response.data;
+		try {
+			const response = await Axios.get(`${POKEAPI_URL}/pokemon/${name}`);
+			return response.data;
+		} catch (err) {
+			return null;
+		}
 	},
 };

@@ -2,7 +2,7 @@ import { faHeart, faHeartBroken } from '@fortawesome/free-solid-svg-icons';
 import PropTypes from 'prop-types';
 import React from 'react';
 import Button from '../Button/Button';
-import './PokemonCard';
+import './PokemonCard.scss';
 
 const PokemonCard = (props) => {
 	const {

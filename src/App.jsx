@@ -10,25 +10,29 @@ function App() {
 	return (
 		<div className="App">
 			<BrowserRouter>
-				<Switch>
-					<div className="App-tabs">
-						<div>
-							<Link to="">
-								<Button variant={'primary'} block icon={faSearch}>
-									Search pokemon
-								</Button>
-							</Link>
-						</div>
-						<div>
-							<Link to="/favorites">
-								<Button variant={'secondary'} block icon={faHeart}>
-									Favorites
-								</Button>
-							</Link>
-						</div>
+				<div className="App-tabs">
+					<div>
+						<Link to="">
+							<Button variant={'primary'} block icon={faSearch}>
+								Search pokemon
+							</Button>
+						</Link>
 					</div>
-					<Route path="" component={SearchPage} />
-					<Route path="/favorites" component={FavoritesListPage} />
+					<div>
+						<Link to="/favorites">
+							<Button variant={'secondary'} block icon={faHeart}>
+								Favorites
+							</Button>
+						</Link>
+					</div>
+				</div>
+				<Switch>
+					<Route path="/favorites">
+						<FavoritesListPage />
+					</Route>
+					<Route path="/">
+						<SearchPage />
+					</Route>
 					<Redirect from="*" to="" />
 				</Switch>
 			</BrowserRouter>
